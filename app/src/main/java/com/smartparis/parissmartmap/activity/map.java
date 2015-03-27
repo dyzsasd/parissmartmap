@@ -23,7 +23,13 @@ public class map extends ActionBarActivity {
         MapView map = (MapView) findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.MAPNIK);
 
+        map.setBuiltInZoomControls(true);
+        map.setMultiTouchControls(true);
 
+        IMapController mapController = map.getController();
+        mapController.setZoom(13);
+        GeoPoint startPoint = new GeoPoint(48.856085, 2.3450873,2944);
+        mapController.setCenter(startPoint);
     }
 
 

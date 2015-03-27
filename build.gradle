@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.0'
         classpath 'org.osmdroid:osmdroid-android:4.3'
+        classpath 'org.slf4j:slf4j-api:1.7.10'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
