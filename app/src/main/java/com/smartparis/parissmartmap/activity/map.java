@@ -1,9 +1,17 @@
-package com.smartparis.parissmartmap;
+package com.smartparis.parissmartmap.activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+
+import com.smartparis.parissmartmap.R;
+
+import org.osmdroid.api.IMapController;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
 
 
 public class map extends ActionBarActivity {
@@ -12,6 +20,10 @@ public class map extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        MapView map = (MapView) findViewById(R.id.map);
+        map.setTileSource(TileSourceFactory.MAPNIK);
+
+
     }
 
 
